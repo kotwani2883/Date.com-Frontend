@@ -6,14 +6,14 @@ import "./TinderCards.css";
 function TinderCards() {
   const [people, setPeople] = useState([]);
 
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const req = await axios.get("/tinder/cards");
+  useEffect(() => {
+    async function fetchData() {
+      const req = await axios.get("/tinder/cards");
 
-  //     setPeople(req.data);
-  //   }
-  //   fetchData();
-  // }, []);
+      setPeople(req.data);
+    }
+    fetchData();
+  }, []);
 
   console.log(people);
 
